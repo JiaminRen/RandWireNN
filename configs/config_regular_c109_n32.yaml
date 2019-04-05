@@ -1,0 +1,32 @@
+TRAIN:
+    workers: 3
+    batch_size: 256
+    epochs: 100
+
+    lr_mode : cosine
+    base_lr: 0.1
+    warmup_epochs: 0
+    warmup_lr: 0.0
+    targetlr : 0.0
+
+    momentum: 0.9
+    weight_decay: 0.00005
+
+    net_type : regular
+    channels : 109
+    nodes : 32
+    graph_model : WS
+    K : 4
+    P : 0.75
+    seed : 1
+
+    print_freq: 100
+    model_dir: checkpoint/regular_c109_n32
+
+    train_root: data/imagenet/train
+    train_source: data/imagenet/train.txt
+    val_root: data/imagenet/val
+    val_source: data/imagenet/val.txt
+
+TEST:
+    checkpoint_path : data/pretrained_model/regular_c109_n32.pth
