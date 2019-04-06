@@ -137,7 +137,7 @@ def main():
             best_prec1 = max(prec1, best_prec1)
             save_checkpoint(model_dir, {
                 'epoch': epoch + 1,
-                'model': args.model,
+                'model': args.config.rsplit('/',1)[-1].split('.yaml')[0],
                 'state_dict': model.state_dict(),
                 'best_prec1': best_prec1,
                 'optimizer': optimizer.state_dict(),

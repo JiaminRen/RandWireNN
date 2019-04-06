@@ -10,7 +10,6 @@ class depthwise_separable_conv_3x3(nn.Module):
   def __init__(self, nin, nout, stride):
     super(depthwise_separable_conv_3x3, self).__init__()
     self.depthwise = nn.Conv2d(nin, nin, kernel_size=3, stride=stride, padding=1, groups=nin)
-    # self.depthwise = nn.Conv2d(nin, nout, kernel_size=3, stride=stride, padding=1)
     self.pointwise = nn.Conv2d(nin, nout, kernel_size=1)
 
   def forward(self, x):
