@@ -20,7 +20,7 @@ Download the ImageNet dataset and put them into the `{repo_root}/data/imagenet`.
 
 ## Training a model from scratch
 ```
-./train_val.sh configs/config_regular_c109_n32.yaml
+./train.sh configs/config_regular_c109_n32.yaml
 ```
 ## License
 All materials in this repository are released under the  Apache License 2.0.
