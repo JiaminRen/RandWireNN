@@ -10,6 +10,7 @@ PyTorch implementation of :
 | Model | Paper's Top-1 | Mine Top-1 | Epochs |LR Scheduler| Weight Decay |
 | :----:| :--: | :--:  | :--:  | :--:  | :--:  |
 |RandWire-WS(4, 0.75), C=109| 79% | 77% <sup>*</sup>| 100 | cosine lr | 5e-5 |
+|RandWire-WS(4, 0.75), C=78| 74.7% | 73.97% <sup>*</sup>| 250 | cosine lr | 5e-5 |
 
 *This result does not take advantage of dropout, droppath and label smoothing techniques. I will use these tricks to retrain the model.
 ## Requirements
